@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}INV LIST{{ block.super }}{% endblock title %}
+{% block content %}
+    <h1>Išrašytos sąskaitos:</h1>
+        <ul>
+            {% for client in created_data_list %}
+                <li>
+                    <a href="{% url 'created_client_detail' client.id %}">{{ client.invoice_number }} {{client.created_date|date:"Y/m/d"}} {{client.client_name}} {{client.make}} {{client.model}} {{client.number_plate}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+{% endblock content %}

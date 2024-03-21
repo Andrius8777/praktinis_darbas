@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Mechanics{{ block.super }}{% endblock title %}
+{% block content %}
+    <h1>Darbuotojai:</h1>
+        <form method="post">
+            {% csrf_token %}
+            {% for mechanic in mechanics %}
+                <input type="checkbox" id="mechanic_{{ mechanic.id }}" name="mechanic" value="{{ mechanic.id }}">
+                <label for="mechanic_{{ mechanic.id }}">{{ mechanic.name }}</label><br>
+            {% endfor %}
+            <button type="submit">Submit</button>
+            <a href="{% url 'home' %}"><button type="button">Atšaukti</button></a>
+        </form>
+{% endblock content %}

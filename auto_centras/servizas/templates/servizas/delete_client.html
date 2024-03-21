@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Trinimas{{ block.super }}{% endblock title %}
+{% block content %}
+    <h1>Ar jus tikrai norite pašalinti sąskaitą?</h1>
+    <p>{{ client.invoice_number }} D.D {{ client.created_date|date:"Y/m/d" }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Patvirtinti</button>
+        <a href="{% url 'created_data_list' %}"><button type="button">Atšaukti</button></a>
+    </form>
+{% endblock content %}

@@ -1,0 +1,183 @@
+{% extends "base.html" %}{% load static%}
+{% block content %}
+    <h1>Registracija</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="id_client_name">Vardas:</label>
+        <input type="text" id="id_client_name" name="client_name"><br>
+
+        <label for="id_phone_number">Telefono nr.:</label>
+        <input type="text" id="id_phone_number" name="phone_number"><br>
+
+        <label for="id_make">Auto markė:</label>
+        <select id="id_make" name="make">
+            <option value=""></option>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="VW">VW</option>
+            <option value="Volvo">VOLVO</option>
+            <option value="Peugeot">PEUGEOT</option>
+            <option value="Lexus">LEXUS</option>
+            <option value="Skoda">SKODA</option>
+            <option value="Renault">RENAULT</option>
+            <option value="Citroen">CITROEN</option>
+            <option value="Fiat">FIAT</option>
+            <option value="Toyota">TOYOTA</option>
+            <option value="Ford">FORD</option>
+            <option value="Opel">OPEL</option>
+            <option value="Porsche">PORSCHE</option>   
+        </select><br>
+
+        <label for="id_model">Auto modelis:</label>
+        <select id="id_model" name="model">
+        </select><br>
+
+        <label for="id_number_plate">Tr.p. numeriai:</label>
+        <input type="text" id="id_number_plate" name="number_plate"><br>
+
+        <label for="id_vin_number">VIN Numeris:</label>
+        <input type="text" id="id_vin_number" name="vin_number"><br>
+
+        <label for="id_year">Pagaminimo metai:</label>
+        <select id="id_year" name="year"></select><br>
+
+        <label for="id_engine_type">Variklio tipas:</label>
+        <select id="id_engine_type" name="engine_type">
+            <option value=""></option>
+            <option value="Dyzelis">Dyzelis</option>
+            <option value="Benzinas">Benzinas</option>
+            <option value="Hybridas">Hybridas</option>
+            <option value="Elektra">Elektra</option>
+        </select><br>
+
+        <label for="id_driven_axle">Varomoji ašis:</label>
+        <select id="id_driven_axle" name="driven_axle">
+            <option value=""></option>
+            <option value="FWD">FWD</option>
+            <option value="RWD">RWD</option>
+            <option value="AWD">AWD</option>
+            <option value="4WD">4WD</option>
+        </select><br>
+
+        <label for="id_body_type">Kėbulo tipas:</label>
+        <select id="id_body_type" name="body_type">
+            <option value=""></option>
+            <option value="Sedanas">Sedanas</option>
+            <option value="Kabrioletas">Kabrioletas</option>
+            <option value="Krosoveris">Krosoveris</option>
+            <option value="Hečbekas">Hečbekas</option>
+            <option value="Kupė">Kupė</option>
+            <option value="Furgonas">Furgonas</option>
+            <option value="Minivenas">Minivenas</option>
+            <option value="Džipas">Džipas</option>
+        </select><br>
+
+        <label for="id_gearbox_type">Pavarų dėžė:</label>
+        <select id="id_gearbox_type" name="gearbox_type">
+            <option value=""></option>
+            <option value="Automatinė">Automatinė</option>
+            <option value="Rankinė">Rankinė</option>
+        </select><br>
+
+        <label for="id_engine_power_kw">Variklio galia(KW):</label>
+        <select id="id_engine_power_kw" name="engine_power_kw">
+        </select><br>
+
+        <label for="id_engine_capacity">Variklio talpa(l):</label>
+        <select id="id_engine_capacity" name="engine_capacity">
+        </select><br>
+
+        <label for="id_issue_notes">Vizito priežastis:</label><br>
+        <textarea id="id_issue_notes" name="issue_notes" rows="4" cols="50"></textarea><br>
+
+        <label for="id_ordered_parts_description">Pakeistos dalys:</label><br>
+        <textarea id="id_ordered_parts_description" name="ordered_parts_description" rows="4" cols="50"></textarea><br>
+
+        <label for="id_ordered_parts_price">Detalių kaina:</label><br>
+        <input type="number" id="id_ordered_parts_price" name="ordered_parts_price" step="0.01">&euro;<br>
+
+        <label for="id_mechanic">Darbus atliko:</label><br>
+        <select id="id_mechanic" name="mechanic">
+        <option value="">---------</option>
+        {% for mechanic in form.mechanic.field.queryset %}
+        <option value="{{ mechanic.pk }}">{{ mechanic.name }}</option>
+        {% endfor %}
+        </select><br>
+
+        <label for="id_labor_cost">Įkainis už remontą:</label><br>
+        <input type="number" id="id_labor_cost" name="labor_cost">&euro;<br>
+
+        <label for="id_repair_notes">Atlikti darbai</label><br>
+        <textarea id="id_repair_notes" name="repair_notes" rows="4" cols="50"></textarea><br>
+
+
+        <button type="submit">Sukurti</button>
+        
+
+    </form>
+    
+    <script src="{% static 'js/dynamic_models.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const yearSelect = document.getElementById('id_year');
+            const currentYear = new Date().getFullYear();
+
+            const blankOption = document.createElement('option');
+            blankOption.textContent = ''; 
+            blankOption.value = ''; 
+            yearSelect.appendChild(blankOption);
+
+            for (let year = currentYear; year >= 1990; year--) {
+            const option = document.createElement('option');
+            option.textContent = year;
+            option.value = year;
+            yearSelect.appendChild(option);
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const engineCapacitySelect = document.getElementById('id_engine_capacity');
+            const step = 0.1;
+            const minCapacity = 0.9;
+            const maxCapacity = 6.0;
+
+            const defaultOption = document.createElement('option');
+            defaultOption.textContent = ''; 
+            defaultOption.value = ''; 
+            engineCapacitySelect.appendChild(defaultOption);
+
+            for (let capacity = minCapacity; capacity <= maxCapacity; capacity += step) {
+            const option = document.createElement('option');
+            option.textContent = capacity.toFixed(1); 
+            option.value = capacity.toFixed(1);
+            engineCapacitySelect.appendChild(option);
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const enginePowerSelect = document.getElementById('id_engine_power_kw');
+            const minPower = 40;
+            const maxPower = 400;
+        
+   
+            const blankOption = document.createElement('option');
+            blankOption.textContent = ''; 
+            blankOption.value = ''; 
+            enginePowerSelect.appendChild(blankOption);
+        
+        
+            for (let power = minPower; power <= maxPower; power++) {
+            const option = document.createElement('option');
+            option.textContent = power;
+            option.value = power;
+            enginePowerSelect.appendChild(option);
+            }
+        });
+    </script>
+</body>
+</html>
+{% endblock content %}

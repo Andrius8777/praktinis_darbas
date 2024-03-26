@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+@page {
+    margin: 1cm;
+}
+
+
+.reg-mainas {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0 auto; 
+    width: 100%;
+    max-width: 800px; 
+    position: relative; /
+}
+
+
+.reg-kontas {
+    margin: 0;
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+
+.header-section {
+    margin-bottom: 20px;
+    display: flex; 
+    justify-content: space-between; 
+}
+
+
+.rekvizitai {
+    font-size: 12;
+    font-weight: bold;
+}
+
+
+.logo-and-heading {
+    display: flex; 
+    align-items: center; 
+}
+
+
+.logo-section {
+    margin-right: 20px; 
+}
+
+
+.gavejas {
+    font-size: 12;
+    font-weight: bold;
+}
+
+
+.content-section {
+    clear: both; 
+    margin-top: 5rem;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+
+.reg-kontas h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+.reg-kontas p {
+    margin-bottom: 1px;
+}
+
+
+.footer-section button {
+    margin-right: 20px; 
+}
+
+
+@media print {
+    .reg-kontas button,
+    .reg-kontas a {
+        display: none;
+    }
+}
+
+
+.total {
+    text-align: center; 
+    margin-top: 4rem;
+}
+
+.direktorius {
+    text-align: left;
+    margin-top: 6rem;
+}

@@ -1,0 +1,527 @@
+body {                                     /*veikia*/
+    font-family: 'Segoe UI';
+    letter-spacing: 0.25px;
+    min-width: 360px;
+    overflow-x: hidden;
+    margin: 0;
+    background-color: whitesmoke;
+    display: block;
+    box-sizing: border-box;
+}
+
+
+.puslapis {                /*nlb veikia i apacia*/
+    width: auto;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding-top: 0;           /*pakeiciau*/
+    box-sizing: border-box;
+    
+}
+
+
+
+.servis-header .header-topas {  /*veikia*/
+    height: 35px;
+    background: whitesmoke;
+    position: static;
+}
+
+.servis-header .header-mainas {
+    height: 80px;
+    background: #003253;
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+.servis-header .header-mainas .kontas {
+    height: 100%;
+}
+
+.kontas {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+}
+
+.servis-header .konto-turinys {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.servis-header .logo-textas {
+    display: flex;
+}
+
+.a {                          /*neveikia*/
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    display: inline-block;
+    transition: color 350ms;
+    font-family: "Segoe UI";
+    font-weight: 2000;
+    letter-spacing: 0.25px;
+    line-height: 16px;
+}
+
+.servis-header .logo-textas .logo {
+    position: relative;
+    top: -25px;
+    height: 130px;
+    width: 130px;
+    z-index: 100;
+    transform: rotate(-0.01turn);
+}
+
+.servis-header .logo-textas .logo img {
+    width: 100%;
+}
+.logo-image img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.servis-header .logo-textas .textas {
+    font-family: 'Segoe UI';
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    align-self: center;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+.button-login  {                        /* veikia */
+    background-color: whitesmoke;
+    color: #003253;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-login:hover  {                     /* veikia */      
+
+    background-color: #bcbaba; 
+}
+
+
+.servis-header .header-mainas .button-header {  /* veikia */
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-weight: 700;
+}
+
+.button-header li {
+    margin-right: 15px; /* veikia */
+}
+
+
+.servis-header .header-bottom {
+    background: whitesmoke;
+    position: relative;
+}
+
+.servis-header .header-bottom .header-menu {   /* veikia */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    padding-left: 105px;
+    flex-wrap: wrap;
+}
+
+.servis-header .header-bottom .nav-menu {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    align-self: baseline;
+}
+
+
+
+ul li {
+    margin: 0px 320px 70px 0;
+    padding: 0;
+    list-style: none;
+    
+
+}
+
+
+
+a.menu-link {    /*veikia */
+    height: auto;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    line-height: 3rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: #404142;
+    width: 100%;
+}
+
+
+a.menu-link:hover {             /*veikia*/
+    color: #003253;    
+}
+
+
+
+
+
+
+
+
+
+
+/*footeris*/
+
+
+.main-footeris {
+    background-color: #bcbaba;
+    padding: 5px 0 7px;
+
+}
+
+.stulpeliai {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+/*stulpelis1*/
+
+
+.stulpelis-1 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 40px;
+    padding-left: 40px;
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.main-footeris .stulpelis-1 {     /*kontaktai tekstas*/
+    margin-bottom: 20px;
+    font-family: 'Segoe UI';
+    color: #003253;
+    font-weight: 750;
+    font-size: 18px;
+}
+
+.main-footeris .pavadinimas-a {   /*kontaktai tekstas atstumas*/
+    margin-bottom: 25px;
+}
+
+.main-footeris .pavadinimas-a-1 {
+    margin-bottom: 5px;
+}
+
+.stulpelis-1 .pavadinimas-a-1 .cont {    /*kontaktu isdestymas*/
+    margin-right: 15px; 
+    width: 40px; 
+    height: auto;
+    
+    }
+
+.stulpelis-1 .pavadinimas-a-1 {    /*kontaktu tekstas*/
+    font-size: 16px; 
+    color: #003253;
+    font-weight: 500; 
+    }
+
+.pavadinimas-a-1:not(:first-child) {
+    margin-top: 5px; /* atstumas tarp eiluciu */
+    }
+
+
+
+/*stulpelis2*/
+
+
+.stulpelis-2 .pavadinimas-b {    /*kontaktu tekstas*/
+    font-family: 'Segoe UI';
+    color: #003253;
+    font-weight: 750;
+    font-size: 18px;
+    margin-left: 8px;
+    }
+
+.stulpelis-2 {                                  /*lyg veikia*/
+    position: relative;
+    width: 100%;
+    min-height: 1px;  
+    flex: 0 0 33%;
+    max-width: 33%;
+    text-align: center;
+    }
+
+
+
+.icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0.3rem;
+    border-radius: 0.7rem;
+}
+
+
+
+/*stulpelis3*/
+
+
+.stulpelis-3 .pavadinimas-c {
+    font-family: 'Segoe UI';
+    color: #003253;
+    font-weight: 750;
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.stulpelis-3  {                                  /*lyg veikia*/
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 40%;
+    max-width: 25%;
+    text-align: right;
+    }
+
+
+.ukraine {
+    width: 11rem;
+    height: 11rem;
+    margin: 0.3rem;
+    }
+
+
+/*stulpelis3*/
+
+.t-kontas {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;  
+}
+
+.t-body {
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    color: #404142;
+    font-weight: 600;
+}
+
+
+/*mainas pakeisti hero*/
+
+.page-mainas {          /*PUSLAPIS pagr.*/
+    width: auto;
+    max-width: 1920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.blokas-pilnas {
+    margin-bottom: 120px;
+}
+
+.blokas-apacia-hero {       /*taisyti pav.*/
+    margin-bottom: 80px;
+}
+
+
+.krastai {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.bloko-kontas .bloko-krastai {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.bloko-sonai {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+} 
+
+.padalinimas {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.blokas-apacia-hero .pic-krastai {
+    margin: 1.875rem 0 3.75rem;
+    z-index: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.blokas-apacia-hero .pic-sonas {
+    padding-left: 1.875rem;
+} 
+
+.blokas-apacia-hero .pic-vieta {
+    margin-bottom: 0;
+}
+
+.pic-vieta .main-pic {
+    position: relative
+}
+
+
+
+.main-pic img {
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+/*maino sonas*/
+
+.blokas-apacia-hero .langas-sonai { /*ziuret gali dubliuotis parametrai*/
+    margin-left: -8.4%;
+    z-index: 0;
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+    
+}
+
+
+
+
+.blokas-apacia-hero .langas-sonai .langas-remelis { /*ziuret taisyti gal reik backgroundo*/
+    height: 100%;
+    justify-content: center;
+    background-color: #bcbaba;
+}
+
+.blokas-apacia-hero .langas-sonai .langas-remelis .langas-apvadai {  /*ziuret taisyti gal reik padding-bottom?*/
+    padding: 3.875rem 12.5% 3.75rem 20%;
+
+}
+
+.langas-apvadai {
+    overflow: hidden;
+    
+}
+
+.blokas-apacia-hero .langas-sonai .langas-remelis .langas-apvadai .langas-turinis {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+
+.h1 {
+    color: #003253;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.langas-textas {
+    font-size: 1.2rem;
+    line-height: 1.875rem;
+    margin-bottom: 1.875rem;
+    color: #003253;
+
+
+}
+
+.blokas-apacia-hero .bloko-krastai .langas-turinis {
+    margin-right: 0;
+}
+
+.draugai {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+
+.iconfb {
+    margin-bottom: -1.6rem;
+}
+
+.tyre-pic {
+   align-items: center;
+}
+
+.langas-turinys2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+
+/*services.html*/
+
+
+.blokas-apacia-serv {       /*taisyti pav.*/
+    margin-bottom: 80px;
+    font-size: 80%;
+    font-weight: 400;
+}
+
+
+.serv-tekstas {
+    text-align: center;
+}
+
+.h2 {
+    font-family: "Segoe UI";
+    color: black;
+    font-weight: 700;
+    margin-bottom: 30px; 
+    font-size: 3rem;
+    line-height: 3.75rem;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <title>Main web</title>
+</head> 
+<body>
+<div class="puslapis">
+    <header class="servis-header">
+        <div class="header-topas"></div>
+        <div class="header-mainas">
+            <div class="kontas">
+                <div class="konto-turinys">
+                    <div class="logo-textas">
+                        <a href="http://127.0.0.1:8000/">
+                            <div class="logo">
+                                <div class="logo-image">
+                                    <img src="{% static 'images/logo_main.png' %}" alt="Garage logo">
+                                </div>
+                            </div>                 
+                        </a>
+                        <div class="textas">
+                            <span>Visos paslaugos Jūsų automobiliui!</span>           
+                        </div>
+                    </div>
+                    <div class="button-header">
+                        <li><a href="{% url "login" %}" class="button-login">Prisijungti</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="kontas">
+                <div class="konto-turinys">
+                    <nav class="header-menu">
+                        <ul class="nav-menu">
+                            <li class="menu-button">
+                                <a class="menu-link" href="{% url "about_page" %}">Apie mus</a>
+                                <a class="menu-link" href="{% url "services" %}">Autoservizo paslaugos</a>
+                                <a class="menu-link" href="{% url "shop" %}">Auto detalių parduotuvė</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block content %}
+    <div class="page-mainas">
+        <div class="blokas-pilnas">
+            <div class="blokas-apacia-hero">
+                <div class="bloko-kontas">
+                    <div class="bloko-krastai">
+                        <div class="bloko-sonai">
+                            <div class="padalinimas">
+                                <div class="pic-krastai">
+                                    <div class="pic-sonas">
+                                        <div class="pic-vieta">
+                                            <div class="main-pic">
+                                                <img class="home-pic" src="{% static 'images/main_pic.jpg' %}" alt="main pic">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="langas-sonai">
+                                    <div class="langas-remelis">
+                                        <div class="langas-apvadai">
+                                            <div class="langas-turinys">
+                                                <h1 class="h1"> Kodėl verta naudotis mūsų servizo paslaugomis? </h1>
+                                                <p class="langas-textas">
+                                                    Vievio autocentras, stengiasi užtikrinti tik aukščiausio lygio paslaugas,
+                                                    garantuoja profesionalią darbų kokybę, kurią užtikrina kvalifikuoti bei ilgą
+                                                    patirtį turintys serviso darbuotojai. Mūsų komanda puikiai išmano savo darbą
+                                                    ir tai atsispindi jų rezultatuose bei klientų atsiliepimuose. Mūsų klientai
+                                                    ir partneriai jau spėjo įsitikinti mūsų teikiamų paslaugų kokybe bei profesionalumu.
+                                                    Paprasta techninė apžiūra, ar rimto variklio gedimo šalinimas, Vievio autocentro specialistai
+                                                    su nuolat atnaujinamomis teorinėmis bei praktinėmis žiniomis gali greitai išspręsti Jūsų
+                                                    automobilio problemas ir tinkamai Jus supažindinti su atliktais darbais, bei jų specifika.
+                                                    Savo darbų kokybę garantuojame, todėl visiems atliktiems darbams suteikiame garantijas.
+                                                </p>
+                                                <div class="draugai">
+                                                    <h1 class="h1"> Apsilankyk ir tu! </h1>
+                                                        <a href="https://www.facebook.com/vievio.autocentras/"><img class="iconfb" src="{% static "images/fb.png" %}"></a>
+                                                </div> 
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+        </div>
+        <div class="kontas">
+            <div class="langas-turinys2">
+                <h1 class="h1"> Padangų keitimo sezonas jau čia pat! Paskubėkite išankstinei registracijai! </h1>
+                <div class="tyre-kontas">
+                    <img class="tyre-pic" src="{% static 'images/tyres.png' %}" alt="main pic">
+                </div>
+            </div> 
+        </div>    
+    </div>
+    {% endblock %}
+    <footer class="main-footeris">
+        <div class="kontas">
+            <div class="stulpeliai">
+                <div class="stulpelis-1">
+                    <p class="pavadinimas-a">Kontaktai:</p>
+                    <p class="pavadinimas-a-1"><img class="cont" src="{% static "images/vv.png" %}">UAB "Vievio AutoCentras"</p>
+                    <p class="pavadinimas-a-1"><img class="cont" src="{% static "images/house.png" %}">Naujoji g. 6A, Vievis, 21375 Elektrėnų sav.</p>
+                    <p class="pavadinimas-a-1"><img class="cont" src="{% static "images/phone.png" %}">Tel.: +37061459800</p>
+                    <p class="pavadinimas-a-1"><img class="cont" src="{% static "images/email.png" %}">vievioautocentras@gmail.com</p>
+                </div>
+                <div class="stulpelis-2">
+                    <p class="pavadinimas-b">Mūsų partneriai:</p>
+                    <div class="partneriai">
+                        <a href="https://www.adbaltic.lt/"><img class="icon" src="{% static "images/ad.png" %}"></a>
+                        <a href="https://www.eoltas.lt/" ><img class="icon" src="{% static "images/eoltas.png" %}"></a>
+                        <a href="https://www.intercars.lt/"><img class="icon" src="{% static "images/intercars.png" %}"></a>
+                    </div>  
+                </div>
+                <div class="stulpelis-3">
+                    <p class="pavadinimas-c">Išjunk okupantus ir tu!</p>
+                    <div class="laisve">
+                        <a href="https://blue-yellow.lt//"><img class="ukraine" src="{% static "images/ua1.png" %}"></a>
+                    </div>  
+                </div>
+            </div>
+                <div class="t-kontas">
+                    <span class="t-body">© Vievio AutoCentras UAB 2016 - 2024, visos teisės saugomos. Created by Andrius PTU20</span>
+                </div>
+            </div>
+        </div>  
+    </footer>
+</div>
+</body>
+</html>

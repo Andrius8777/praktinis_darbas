@@ -5,7 +5,11 @@ from django.utils import timezone
 
     
 class Mechanic(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, verbose_name='Vardas', unique=True)
+    ph_number = models.CharField(max_length=15, verbose_name='Tel. nr.:')
+    skills = models.CharField(max_length=100, verbose_name='Įgūdžiai:')
+    working_from = models.DateTimeField(auto_now_add=True)
+    
 
     def __str__(self):
         return self.name

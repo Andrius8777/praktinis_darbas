@@ -1,14 +1,21 @@
-{% extends "base.html" %}{% load static%}
+{% extends "base.html" %}
+{% load static %}
 {% block content %}
-    <h1>Registracija</h1>
+<div class="reg-mainas">
+  <div class="reg-kontas">    
+    <img src="{% static 'images/main_logo.png' %}" alt="Registration" class="registration-image">
+
     <form method="post">
         {% csrf_token %}
 
         <label for="id_client_name">Vardas:</label>
-        <input type="text" id="id_client_name" name="client_name"><br>
+        <input type="text" id="id_client_name" name="client_name" placeholder="Jonas Jonaitis">
 
         <label for="id_phone_number">Telefono nr.:</label>
-        <input type="text" id="id_phone_number" name="phone_number"><br>
+        <input type="text" id="id_phone_number" name="phone_number" placeholder="+3706*******">
+
+        <label for="id_issue_notes">Vizito priežastis:</label><br>
+        <textarea id="id_issue_notes" name="issue_notes" rows="4" cols="50" placeholder="Aprašykite automobilio atvykimo priežastį"></textarea><br>
 
         <label for="id_make">Auto markė:</label>
         <select id="id_make" name="make">
@@ -34,11 +41,11 @@
         <select id="id_model" name="model">
         </select><br>
 
-        <label for="id_number_plate">Tr.p. numeriai:</label>
-        <input type="text" id="id_number_plate" name="number_plate"><br>
+        <label for="id_number_plate">Tr.pr. numeriai:</label>
+        <input type="text" id="id_number_plate" name="number_plate" placeholder="AAA-000">
 
         <label for="id_vin_number">VIN Numeris:</label>
-        <input type="text" id="id_vin_number" name="vin_number"><br>
+        <input type="text" id="id_vin_number" name="vin_number" placeholder="WBAPNVL379842075A">
 
         <label for="id_year">Pagaminimo metai:</label>
         <select id="id_year" name="year"></select><br>
@@ -85,18 +92,16 @@
         <select id="id_engine_power_kw" name="engine_power_kw">
         </select><br>
 
-        <label for="id_engine_capacity">Variklio talpa(l):</label>
+        <label for="id_engine_capacity">Variklio darbinis tūris(l):</label>
         <select id="id_engine_capacity" name="engine_capacity">
         </select><br>
 
-        <label for="id_issue_notes">Vizito priežastis:</label><br>
-        <textarea id="id_issue_notes" name="issue_notes" rows="4" cols="50"></textarea><br>
 
         <label for="id_ordered_parts_description">Pakeistos dalys:</label><br>
-        <textarea id="id_ordered_parts_description" name="ordered_parts_description" rows="4" cols="50"></textarea><br>
+        <textarea id="id_ordered_parts_description" name="ordered_parts_description" rows="4" cols="50" placeholder="Pakeistų auto detalių sąrašas"></textarea><br>
 
         <label for="id_ordered_parts_price">Detalių kaina:</label><br>
-        <input type="number" id="id_ordered_parts_price" name="ordered_parts_price" step="0.01">&euro;<br>
+        <input type="number" id="id_ordered_parts_price" name="ordered_parts_price" step="0.01" placeholder=0.00€><br>
 
         <label for="id_mechanic">Darbus atliko:</label><br>
         <select id="id_mechanic" name="mechanic">
@@ -107,21 +112,22 @@
         </select><br>
 
         <label for="id_labor_cost">Įkainis už remontą:</label><br>
-        <input type="number" id="id_labor_cost" name="labor_cost">&euro;<br>
+        <input type="number" id="id_labor_cost" name="labor_cost" step="0.01" placeholder=0.00€><br>
 
-        <label for="id_repair_notes">Atlikti darbai</label><br>
-        <textarea id="id_repair_notes" name="repair_notes" rows="4" cols="50"></textarea><br>
-
+        <label for="id_repair_notes">Atlikti darbai:</label><br>
+        <textarea id="id_repair_notes" name="repair_notes" rows="4" cols="50" placeholder="Atliktų darbų sąrašas"></textarea><br>
 
         <button type="submit">Sukurti</button>
-        
+        <a href="{% url 'home' %}"><button type="button">Atšaukti</button></a>
 
     </form>
-    
+</div> 
+</div>
     <script src="{% static 'js/dynamic_models.js' %}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const yearSelect = document.getElementById('id_year');
+            
             const currentYear = new Date().getFullYear();
 
             const blankOption = document.createElement('option');

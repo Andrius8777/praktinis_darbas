@@ -1,14 +1,36 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block title %}Mechanics{{ block.super }}{% endblock title %}
+
 {% block content %}
-    <h1>Darbuotojai:</h1>
-        <form method="post">
-            {% csrf_token %}
+<div class="reg-mainas">
+    <div class="reg-kontas">
+        <div class="logo-and-worker"> 
+            <img src="{% static 'images/worker1.png' %}" alt="list" class="worker-list"> 
+            <h1 class="centered-worker">Darbuotojai:</h1> 
+        </div> 
+        <div class="mechanic-container">
             {% for mechanic in mechanics %}
-                <input type="checkbox" id="mechanic_{{ mechanic.id }}" name="mechanic" value="{{ mechanic.id }}">
-                <label for="mechanic_{{ mechanic.id }}">{{ mechanic.name }}</label><br>
+                <div class="mechanic-card">
+                    <h2>{{ mechanic.name }}</h2>
+                    <p>Mob.nr.: {{ mechanic.ph_number }}</p>
+                    <p>Profilis: {{ mechanic.skills }}</p>
+                    <p>Dirba nuo: {{ mechanic.working_from|date:"Y/m/d" }}</p>
+                </div>
             {% endfor %}
-            <button type="submit">Submit</button>
-            <a href="{% url 'home' %}"><button type="button">Atšaukti</button></a>
-        </form>
+        </div>
+        <div class="worker-button">
+            <a href="{% url 'create_mechanic' %}"><button>Pridėti</button></a>
+            <a href="{% url 'home' %}"><button class="cancel-btn">Atšaukti</button></a>
+        </div>
+    </div>
+</div>
 {% endblock content %}
+
+
+
+
+
+
+

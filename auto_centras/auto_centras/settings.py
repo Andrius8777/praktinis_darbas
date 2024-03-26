@@ -32,9 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'web_page',
     'servizas',
-    "crispy_forms",
-    "crispy_bootstrap4",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,8 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-#CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
-#CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -74,9 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'auto_centras.wsgi.application'
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -133,7 +129,8 @@ MEDIA_ROOT = BASE_DIR.joinpath(MEDIA_URL)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+LOGIN_REDIRECT_URL = '/servizas/home/'
+LOGOUT_REDIRECT_URL = '/main_page/'
 
 try:
 	from .local_settings import*            

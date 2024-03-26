@@ -1,0 +1,1163 @@
+body {                                     /*veikia*/
+    font-family: 'Segoe UI';
+    letter-spacing: 0.25px;
+    min-width: 360px;
+    overflow-x: hidden;
+    margin: 0;
+    background-color: whitesmoke;
+    display: block;
+    box-sizing: border-box;
+}
+
+
+.puslapis {                /*nlb veikia i apacia*/
+    width: auto;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding-top: 0;           /*pakeiciau*/
+    box-sizing: border-box;
+    
+}
+
+
+
+.servis-header .header-topas {  /*veikia*/
+    height: 35px;
+    background: whitesmoke;
+    position: static;
+}
+
+.servis-header .header-mainas {
+    height: 80px;
+    background: #003253;
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+.servis-header .header-mainas .kontas {
+    height: 100%;
+}
+
+.kontas {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+}
+
+.servis-header .konto-turinys {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.servis-header .logo-textas {
+    display: flex;
+}
+
+.a {                          /*neveikia*/
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    display: inline-block;
+    transition: color 350ms;
+    font-family: "Segoe UI";
+    font-weight: 2000;
+    letter-spacing: 0.25px;
+    line-height: 16px;
+}
+
+.servis-header .logo-textas .logo {
+    position: relative;
+    top: -25px;
+    height: 130px;
+    width: 130px;
+    z-index: 100;
+    transform: rotate(-0.01turn);
+}
+
+.servis-header .logo-textas .logo img {
+    width: 100%;
+}
+.logo-image img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.servis-header .logo-textas .textas {
+    font-family: 'Segoe UI';
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    align-self: center;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+.button-login  {                        /* veikia */
+    background-color: whitesmoke;
+    color: #003253;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-login:hover  {                     /* veikia */      
+
+    background-color: #bcbaba; 
+}
+
+
+.servis-header .header-mainas .button-header {  /* veikia */
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-weight: 700;
+}
+
+.button-header li {
+    margin-right: 15px; /* veikia */
+}
+
+
+.servis-header .header-bottom {
+    background: whitesmoke;
+    position: relative;
+}
+
+.servis-header .header-bottom .header-menu {   /* veikia */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    padding-left: 105px;
+    flex-wrap: wrap;
+}
+
+.servis-header .header-bottom .nav-menu {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    align-self: baseline;
+}
+
+
+
+ul li {
+    margin: 0px 320px 70px 0;
+    padding: 0;
+    list-style: none;
+    
+
+}
+
+
+
+a.menu-link {    /*veikia */
+    height: auto;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    line-height: 3rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: #404142;
+    width: 100%;
+}
+
+
+a.menu-link:hover {             /*veikia*/
+    color: #003253;    
+}
+
+
+
+
+
+
+
+
+
+
+/*footeris*/
+
+
+.main-footeris {
+    background-color: #bcbaba;
+    padding: 5px 0 7px;
+
+}
+
+.stulpeliai {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+/*stulpelis1*/
+
+
+.stulpelis-1 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 40px;
+    padding-left: 40px;
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.main-footeris .stulpelis-1 {     /*kontaktai tekstas*/
+    margin-bottom: 20px;
+    font-family: 'Segoe UI';
+    color: #003253;
+    font-weight: 750;
+    font-size: 18px;
+}
+
+.main-footeris .pavadinimas-a {   /*kontaktai tekstas atstumas*/
+    margin-bottom: 25px;
+}
+
+.main-footeris .pavadinimas-a-1 {
+    margin-bottom: 5px;
+}
+
+.stulpelis-1 .pavadinimas-a-1 .cont {    /*kontaktu isdestymas*/
+    margin-right: 15px; 
+    width: 40px; 
+    height: auto;
+    
+    }
+
+.stulpelis-1 .pavadinimas-a-1 {    /*kontaktu tekstas*/
+    font-size: 16px; 
+    color: #003253;
+    font-weight: 500; 
+    }
+
+.pavadinimas-a-1:not(:first-child) {
+    margin-top: 5px; /* atstumas tarp eiluciu */
+    }
+
+
+
+/*stulpelis2*/
+
+
+.stulpelis-2 .pavadinimas-b {    /*kontaktu tekstas*/
+    font-family: 'Segoe UI';
+    color: #003253;
+    font-weight: 750;
+    font-size: 18px;
+    margin-left: 8px;
+    }
+
+.stulpelis-2 {                                  /*lyg veikia*/
+    position: relative;
+    width: 100%;
+    min-height: 1px;  
+    flex: 0 0 33%;
+    max-width: 33%;
+    text-align: center;
+    }
+
+
+
+.icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0.3rem;
+    border-radius: 0.7rem;
+}
+
+
+
+/*stulpelis3*/
+
+
+.stulpelis-3 .pavadinimas-c {
+    font-family: 'Segoe UI';
+    color: #003253;
+    font-weight: 750;
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.stulpelis-3  {                                  /*lyg veikia*/
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 40%;
+    max-width: 25%;
+    text-align: right;
+    }
+
+
+.ukraine {
+    width: 11rem;
+    height: 11rem;
+    margin: 0.3rem;
+    }
+
+
+/*stulpelis3*/
+
+.t-kontas {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;  
+}
+
+.t-body {
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    color: #404142;
+    font-weight: 600;
+}
+
+
+/*mainas pakeisti hero*/
+
+.page-mainas {          /*PUSLAPIS pagr.*/
+    width: auto;
+    max-width: 1920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.blokas-pilnas {
+    margin-bottom: 120px;
+}
+
+.blokas-apacia-hero {       /*taisyti pav.*/
+    margin-bottom: 80px;
+}
+
+
+.krastai {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.bloko-kontas .bloko-krastai {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.bloko-sonai {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+} 
+
+.padalinimas {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.blokas-apacia-hero .pic-krastai {
+    margin: 1.875rem 0 3.75rem;
+    z-index: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.blokas-apacia-hero .pic-sonas {
+    padding-left: 1.875rem;
+} 
+
+.blokas-apacia-hero .pic-vieta {
+    margin-bottom: 0;
+}
+
+.pic-vieta .main-pic {
+    position: relative
+}
+
+
+
+.main-pic img {
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+/*maino sonas*/
+
+.blokas-apacia-hero .langas-sonai { /*ziuret gali dubliuotis parametrai*/
+    margin-left: -8.4%;
+    z-index: 0;
+    flex: 0 0 58%;
+    max-width: 58%;
+    
+}
+
+
+
+
+.blokas-apacia-hero .langas-sonai .langas-remelis { /*ziuret taisyti gal reik backgroundo*/
+    height: 100%;
+    justify-content: center;
+    background-color: #bcbaba;
+}
+
+.blokas-apacia-hero .langas-sonai .langas-remelis .langas-apvadai {  /*ziuret taisyti gal reik padding-bottom?*/
+    padding: 3.875rem 12.5% 3.75rem 20%;
+
+}
+
+.langas-apvadai {
+    overflow: hidden;
+    
+}
+
+.blokas-apacia-hero .langas-sonai .langas-remelis .langas-apvadai .langas-turinis {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+
+.h1 {
+    color: #003253;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.langas-textas {
+    font-size: 1.2rem;
+    line-height: 1.875rem;
+    margin-bottom: 1.875rem;
+    color: #003253;
+
+
+}
+
+.blokas-apacia-hero .bloko-krastai .langas-turinis {
+    margin-right: 0;
+}
+
+.draugai {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+
+.iconfb {
+    margin-bottom: -1.6rem;
+}
+
+.tyre-pic {
+   align-items: center;
+}
+
+.langas-turinys2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+
+/*services.html*/
+
+
+.blokas-apacia-serv {       /*taisyti pav.*/
+    margin-bottom: 80px;
+    font-size: 80%;
+    font-weight: 400;
+}
+
+
+.serv-tekstas {
+    text-align: center;
+}
+
+.h2 {
+    font-family: "Segoe UI";
+    color: black;
+    font-weight: 700;
+    margin-bottom: 30px; 
+    font-size: 3rem;
+    line-height: 3.75rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* login page */
+
+
+body.login-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    background-color: #323131; 
+}
+
+.login-page .fonas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #3d3d3d; 
+    padding: 40px;
+    width: 40rem;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.1);
+}
+
+.remas h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;  
+}
+
+
+
+.remas input {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid whitesmoke;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 1rem;
+   
+}
+
+
+
+.remas button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid whitesmoke;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 1rem;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.remas button:hover {
+    background: #323131;
+}
+
+
+
+/* create_client_data */
+
+.reg-mainas {          
+    width: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.reg-kontas {
+    background-color: #f2f2f2; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 15rem;
+    
+}
+
+.registration-image {
+    max-width: auto;
+    height: auto;
+  }
+
+.reg-kontas form {
+    width: 50%;
+    margin: 0 auto;
+ 
+}
+
+.reg-kontas form label {
+    display: block;
+    margin-bottom: 10px;
+    
+}
+
+.reg-kontas form input[type="text"],
+.reg-kontas form textarea,
+.reg-kontas form select,
+.reg-kontas form input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 18px;
+}
+
+.reg-kontas form select {
+    width: 100%;
+}
+
+.reg-kontas form button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    margin: 0 auto;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+    
+}
+
+.reg-kontas form button[type="button"] {
+    width: 100%;
+    background-color: #9c9d9e;
+    margin: 0 auto;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    
+}
+.reg-kontas form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.reg-kontas form button[type="button"]:hover {
+    background-color: #88898a;
+}
+
+
+/* created_data_list */
+
+
+
+
+.reg-kontas-saskaitos {
+    background-color: #f2f2f2; 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 15rem;
+    text-align: center;
+
+}    
+
+
+.inv-list {
+    width: 5%;
+    height: auto;
+    margin-top: -25px;
+    transform: rotate(-0.01turn);
+}
+
+.logo-and-inv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #003253;
+}
+
+.centered-inv-list {
+    margin-left: 10px; 
+    
+}
+
+.centered-inv-list {
+    font-weight: bold;
+    font-size: 26px;
+    
+}
+
+
+
+
+.reg-kontas-saskaitos h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.button-list {
+    list-style-type: none;
+    margin-top: 20px;
+    
+}
+
+.button-list li {
+    margin-bottom: 1.5px;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #dbdbdb; 
+    color: #0a0a0a; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-left: 7rem;
+    
+}
+
+.button-link:hover {
+    background-color: #003253;
+    color: white; 
+}
+
+
+
+.reg-kontas-saskaitos button[type="button"] {
+    background-color: #9c9d9e;
+    margin: 0 auto;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    
+}
+
+
+.reg-kontas-saskaitos button[type="button"]:hover {
+    background-color: #88898a;
+}
+
+
+/* delete client */
+
+.delete-client {
+    width: 12%;
+    height: auto;
+}
+
+.logo-and-h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+
+.centered-h1 {
+    margin-left: 10px; 
+}
+
+
+
+
+/* mechanic_list */
+
+.mechanic-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+}
+
+.mechanic-card {
+    width: 300px;
+    margin: 10px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.logo-and-worker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111111;
+}
+
+
+.worker-list {
+    width: 18%;
+    height: auto;
+    margin-top: -25px;
+    transform: rotate(-0.01turn);
+}
+
+
+.centered-worker {
+    margin-left: 10px; 
+    
+}
+
+.centered-worker {
+    font-weight: bold;
+    font-size: 26px;
+    
+}
+
+.worker-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.worker-button button {
+    margin: 0 10px; 
+    padding: 10px 30px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem; 
+}
+
+.worker-button button:hover {
+    background-color: #45a049; 
+}
+
+.worker-button a {
+    text-decoration: none; 
+}
+
+.worker-button .cancel-btn {
+    background-color: #9c9d9e;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.worker-button .cancel-btn:hover {
+    background-color: #88898a;
+}
+
+/* create_mechanic */
+
+.worker-reg-image {
+    width: 135px; 
+    margin-bottom: 20px;
+    
+}
+
+/* created_client_detail */
+
+
+
+.worker-button .delete-btn {
+    background-color: #fa4741;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.worker-button .delete-btn:hover {
+    background-color: #f7231c;
+}
+
+.worker-button .edit-btn {
+    background-color: #014d80;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.worker-button .edit-btn:hover {
+    background-color: #003253;
+}
+
+
+.print-btn {
+    background-color: rgb(235, 171, 52);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+    padding: 10px 30px
+}
+
+.print-button-container .print-btn:hover {
+    background-color: rgb(230, 150, 2);
+
+}
+
+.print-button-container {
+    margin-top: -15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: right;
+}
+
+
+.inv-detail-icon {
+    width: 5%;
+    height: auto;
+    transform: rotate(-0.01turn);
+    
+}
+
+.logo-and-inv img {
+    margin-right: 10px; 
+}
+
+.info-kontas p {
+    margin-left: 4rem;
+   
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+
+/* base */
+
+.button-logout  {                      
+    background-color: whitesmoke;
+    color: #003253;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;   
+}
+
+
+
+.button-logout:hover  {                        
+
+    background-color: #bcbaba; 
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.nav-button .n-inv {
+    margin: 0 10px; 
+    padding: 15px 25px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem; 
+}
+
+.nav-button .n-inv:hover {
+    background-color: #45a049; 
+}
+
+.nav-button a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.nav-button .b-inv {
+    margin: 0 10px; 
+    padding: 15px 25px; 
+    background-color: #014d80;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.nav-button .b-inv:hover {
+    background-color: #003253;
+}
+
+.nav-button .b-worker {
+    margin: 0 10px; 
+    padding: 15px 45px; 
+    background-color: rgb(235, 171, 52);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+    
+}
+
+.nav-button .b-worker:hover {
+    background-color: rgb(230, 150, 2);
+
+}
+
+
+.b-kontas {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px; 
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    margin-bottom: 4rem;
+}
+
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 5px;
+}
+
+
+.b-home-icon {
+    width: 70px; 
+    height: auto; 
+    margin-right: 2px; 
+    margin-top: 23px;
+}
+
+
+
+.reg-mainas-b {                    /* variklis */
+    width: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.reg-kontas-b {                 /* variklis */
+    margin-bottom: 15rem;
+    margin-top: 10rem;
+    margin-left: 10rem;
+    
+}
+
+.registration-image-b {         /* variklis */
+    max-width: auto;
+    height: 900px;
+}
+
+.servis-header .header-mainas-b {
+    height: 110px;
+    background: #003253;
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+
+.servis-header .konto-turinys-b {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 110px;
+    list-style-type: none; 
+}
+
+.servis-header .konto-turinys-b .logo-textas-b {
+    font-size: 26px; 
+}
+
+
+.servis-header .konto-turinys-b .logo-textas-b .b-logo {
+    width: 115px; 
+    height: auto;
+    border-radius: 1rem;
+    margin-top: -0.3rem; 
+}
+
+/* b-footeris */
+
+
+.main-footeris-b {
+    background-color: #003253;
+    padding: 5px 0 7px;
+}
+
+.t-body {
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}

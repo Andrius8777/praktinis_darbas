@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-    <h1>Ar jus tikrai norite pašalinti darbuotoją: {{mechanic.name}}?</h1>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Patvirtinti</button>
-        <a href="{% url 'home' %}"><button type="button">Atšaukti</button></a>
-    </form>
-{% endblock content %}

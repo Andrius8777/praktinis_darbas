@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from . import forms
-from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
 from .models import ClientData, Mechanic
 from .forms import ClientDataForm
+from django.db.models import Sum
 
 
 def create_client_data(request):
@@ -11,7 +11,6 @@ def create_client_data(request):
         form = forms.ClientDataForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Įrašas sėkmingai sukurtas')
             return redirect('home')  
     else:
         form = forms.ClientDataForm() 
@@ -22,7 +21,6 @@ def create_mechanic(request):
         form = forms.MechanicForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Darbuotojas sėkmingai sukurtas')
             if request.GET.get('next'):
                 return redirect(request.GET.get('next'))
             return redirect('home')
@@ -59,14 +57,27 @@ def delete_client(request, client_id):
 def home(request):
     return render(request, 'base.html')
 
-def delete_mechanic(request, mechanic_id):
-    mechanic = get_object_or_404(Mechanic, pk=mechanic_id)
-    if request.method == 'POST':
-        mechanic.delete()
-        return redirect('mechanic_list')  
-    return render(request, 'servizas/delete_mechanic.html', {'mechanic': mechanic})
-
 def mechanic_list(request):
     mechanics = Mechanic.objects.all()
     return render(request, 'servizas/mechanic_list.html', {'mechanics': mechanics})
 
+def client_print(request, pk):
+    client = get_object_or_404(ClientData, pk=pk)
+    return render(request, 'servizas/client_print.html', {'client': client})
+
+
+def top_month_mechanic(request):
+    top_mechanics = []
+
+    for month in range(1, 13):
+        mechanics_profit = ClientData.objects.filter(
+            created_date__month=month
+        ).values('mechanic__name').annotate(
+            total_profit=Sum('labor_cost') + Sum('ordered_parts_price')
+        ).order_by('-total_profit')
+
+        if mechanics_profit:
+            top_mechanic = mechanics_profit[0]
+            top_mechanics.append({'month': month, 'top_mechanic': top_mechanic})
+
+    return render(request, 'servizas/top_month_mechanic.html', {'top_mechanics': top_mechanics})

@@ -1,25 +1,33 @@
 {% extends "base.html" %}{% load static %}
 {% block title %}INV DETAIL{{ block.super }}{% endblock title %}
 {% block content %}
-    <h1>Sąskaitos nr.: {{ client.invoice_number }} D.D {{ client.created_date|date:"Y/m/d" }} {{ client.created_date|time:"H:i" }}</h1>
-
-    <p>Kontaktai: {{ client.client_name }} {{ client.phone_number }}</p>
-    <p>Valstybiniai nr: {{ client.number_plate }} </p>
-    <p>Automobilis: {{ client.make }} {{ client.model }} {{ client.year }}m. {{ client.engine_capacity }}(l) {{ client.engine_power_kw }}(KW) VIN: {{ client.vin_number }}</p>
-    <p>Kiti duomenys:</p>
-    <p>Variklio tipas: {{ client.engine_type }}</p>
-    <p>Varančioji ašis: {{ client.driven_axle }}</p>
-    <p>Kėbulo tipas: {{ client.body_type }}</p>
-    <p>Pavarų dėžė: {{ client.gearbox_type }}</p>
-    <p>Vizito priežastis: {{ client.issue_notes }}</p>
-    <p>Užsakytos dalys: {{ client.ordered_parts_description }}</p>
-    <p>Užsakytų dalių kaina: {{ client.ordered_parts_price }}&euro;</p>
-    <p>Darbus atliko: {{ client.mechanic }}</p>
-    <p>Įkainis už remontą: {{ client.labor_cost }}&euro;</p>
-    <p>Atlikti darbai: {{ client.repair_notes }}</p>
-    <p>Iš viso su PVM: {{ client.total_price }}&euro;</p>
-    
-    <a href="{% url 'edit_client' client.pk %}"><button>Redaguoti</button></a>
-    <a href="{% url 'delete_client' client.pk %}"><button>Ištrinti</button></a>
-    <a href="{% url 'home' %}"><button type="button">Atšaukti</button></a>
+<div class="reg-mainas">
+    <div class="reg-kontas">
+        <div class="print-button-container">
+            <a href="{% url 'client_print' client.pk %}" target="_blank"><button class="print-btn">Spausdinti</button></a>
+        </div>
+        <div class="logo-and-inv"> 
+            <img src="{% static 'images/print_file.png' %}" alt="list" class="inv-detail-icon"> 
+            <h1 class="invoice-textas">{{ client.invoice_number }} D.D {{ client.created_date|date:"Y/m/d" }} {{ client.created_date|time:"H:i" }}</h1>
+        </div>
+        <div class="info-kontas">
+            <p>Kontaktai: <span class="bold-text">{{ client.client_name }} {{ client.phone_number }}</span></p>
+            <p>Vizito priežastis: <span class="bold-text">{{ client.issue_notes }}</span></p>
+            <p>Valstybiniai nr: <span class="bold-text">{{ client.number_plate }}</span></p>
+            <p>Automobilis: <span class="bold-text">{{ client.make }} {{ client.model }} {{ client.year }}m. {{ client.engine_capacity }}(l) {{ client.engine_power_kw }}(KW) VIN: {{ client.vin_number }}</span></p>
+            <p>Papildomi duomenys: <span class="bold-text">{{ client.engine_type }} | {{ client.driven_axle }} | {{ client.body_type }} | {{ client.gearbox_type }}</span></p>
+            <p>Užsakytos dalys: <span class="bold-text">{{ client.ordered_parts_description }}</span></p>
+            <p>Užsakytų dalių kaina: <span class="bold-text">{{ client.ordered_parts_price }}&euro;</span></p>
+            <p>Darbus atliko: <span class="bold-text">{{ client.mechanic }}</span></p>
+            <p>Įkainis už remontą: <span class="bold-text">{{ client.labor_cost }}&euro;</span></p>
+            <p>Atlikti darbai: <span class="bold-text">{{ client.repair_notes }}</span></p>
+            <p>Iš viso su PVM: <span class="bold-text">{{ client.total_price }}&euro;</span></p>
+        </div>
+        <div class="worker-button">
+            <a href="{% url 'edit_client' client.pk %}"><button class="edit-btn">Redaguoti</button></a>
+            <a href="{% url 'delete_client' client.pk %}"><button class="delete-btn">Ištrinti</button></a>
+            <a href="{% url 'created_data_list' %}"><button class="cancel-btn">Atšaukti</button></a>
+        </div>
+    </div>
+</div>
 {% endblock content %}

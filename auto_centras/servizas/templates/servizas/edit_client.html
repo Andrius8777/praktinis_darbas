@@ -1,10 +1,15 @@
-{% extends "base.html" %}
+{% extends "base.html" %}{% load static %}
 {% block title %}Redagavimas{{ block.super }}{% endblock title %}
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Išsaugoti</button>
-        <a href="{% url 'home' %}"><button type="button">Atšaukti</button></a>
-    </form>
+<div class="reg-mainas">
+    <div class="reg-kontas">
+        <img src="{% static 'images/main_logo.png' %}" alt="Registration" class="registration-image">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Išsaugoti</button>
+            <a href="{% url 'home' %}"><button type="button">Atšaukti</button></a>
+        </form>
+    </div>   
+</div>
 {% endblock content %}

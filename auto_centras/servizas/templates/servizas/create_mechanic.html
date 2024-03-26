@@ -1,10 +1,29 @@
-{% extends "base.html" %}
+{% extends "base.html" %}{% load static %}
 {% block content %}
-    <h1>Darbuotojas</h1>
-    <form method="post" action="{% url 'create_mechanic' %}?next={{ request.GET.next|urlencode }}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <p><button type="submit">Išsaugoti</button></p>
-        <a href="{% url 'home' %}"><button type="button">Atšaukti</button></a>
-    </form>
+<div class="reg-mainas">
+    <div class="reg-kontas">
+        <img src="{% static 'images/worker1.png' %}" alt="Registration" class="worker-reg-image">
+        <form method="post" action="{% url 'create_mechanic' %}?next={{ request.GET.next|urlencode }}">
+            {% csrf_token %}
+            <label for="id_name"></label>
+            <input type="text" id="id_name" name="name" placeholder="Vardas" required>
+            <br>
+            <label for="id_ph_number"></label>
+            <input type="text" id="id_ph_number" name="ph_number" placeholder="Tel. numeris" required>
+            <br>
+            <label for="id_skills"></label>
+            <input type="text" id="id_skills" name="skills" placeholder="Profilis" required>
+            <br>
+            <button type="submit">Išsaugoti</button>
+            <a href="{% url 'mechanic_list' %}"><button type="button">Atšaukti</button></a>
+        </form>
+    </div>   
+</div>
 {% endblock content %}
+
+
+
+
+
+
+

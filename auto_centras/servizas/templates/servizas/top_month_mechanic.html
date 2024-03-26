@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+    <h1>Top Mechanics by Profit</h1>
+    <table border="1">
+        <tr>
+            <th>Month</th>
+            <th>Mechanic Name</th>
+            <th>Total Profit</th>
+        </tr>
+        {% for item in top_mechanics %}
+        <tr>
+            <td>{{ item.month }}</td>
+            <td>{{ item.top_mechanic.mechanic__name }}</td>
+            <td>{{ item.top_mechanic.total_profit }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+

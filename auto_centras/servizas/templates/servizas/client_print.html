@@ -1,0 +1,59 @@
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/print_styles.css' %}" media="print">
+
+<div class="reg-mainas">
+    <div class="reg-kontas">
+        <div class="header-section">
+            <div class="rekvizitai">
+                <p>Uab "Vievio Autocentras"</p>
+                <p>Naujoji g. 6A, Vievis, 21375 Elektrėnų sav.</p>
+                <p>21375 Elektrėnų sav. Lietuva</p>
+                <p>Tel.: +37061459800</p>
+                <p>Įmonės kodas 304208717</p>
+                <p>PVM mokėtojo kodas LT100010058918</p>
+            </div>
+            <div class="gavejas">
+                <p>Klientas: {{ client.client_name }} </p>
+                <p>Tel. nr.: {{ client.phone_number }} </p>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="logo-and-heading">
+                <div class="logo-section">
+                    <img src="{% static 'images/main_logo.png' %}" alt="Registration" class="registration-image">
+                </div>
+                <h1>Sąskaitos nr.: {{ client.invoice_number }} D.D {{ client.created_date|date:"Y/m/d" }} {{ client.created_date|time:"H:i" }}</h1>
+            </div>
+            <p>Valstybiniai transporto priemonės nr: <span class="bold-text">{{ client.number_plate }}</span></p>
+            <p>Automobilis:<span class="bold-text">{{ client.make }} {{ client.model }} {{ client.year }}m. {{ client.engine_capacity }}(l) {{ client.engine_power_kw }}(KW) VIN: {{ client.vin_number }}</span></p>
+            <p>Papildomi duomenys: <span class="bold-text">{{ client.engine_type }} / {{ client.driven_axle }} / {{ client.body_type }} / {{ client.gearbox_type }}</span></p>
+            <p>Vizito priežastis: <span class="bold-text">{{ client.issue_notes }}</span></p>
+            <p>Užsakytos dalys: <span class="bold-text">{{ client.ordered_parts_description }}</span></p>
+            <p>Užsakytų dalių bendra vertė: <span class="bold-text">{{ client.ordered_parts_price }}&euro;</span></p>
+            <p>Darbus atliko:<span class="bold-text">{{ client.mechanic }}</span></p>
+            <p>Įkainis už remontą:<span class="bold-text">{{ client.labor_cost }}&euro;</span></p>
+            <p>Atlikti darbai:<span class="bold-text">{{ client.repair_notes }}</span></p>
+            <div class="total">
+                <p>Iš viso su PVM:<span class="bold-text">{{ client.total_price }}&euro;</span></p>
+            </div>
+            <div class="direktorius">
+                <p>Sąskaitą išrašė gen. direktorius:<span class="bold-text"></span></p>
+            </div>    
+        </div>           
+    </div>
+</div>
+<script>
+    window.addEventListener('load', function () {
+        setTimeout(function() {
+            window.print();
+        }, 500); 
+        window.onafterprint = function(event) {
+            if (confirm('Ar pavyko atspausdinti?')) {
+                window.location.href = '{% url 'created_client_detail' client.pk %}';
+            }
+        };
+    });
+</script>
+{% endblock content %}

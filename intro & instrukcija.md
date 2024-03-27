@@ -20,8 +20,8 @@ Apskaitos valdymo sistema pasižymi naudingomis funkcijos:
   11) Autorizuotas vartotojas gali kurti (įdarbinti) naujus įmonės darbuotojus.
   12) Matyti darbuotojų detalią informaciją.
   13) Kaip programos "Bonusas" sukurta papildoma opcija, ataskaita apie darbuotojų pasiekimus.
-      Tai yra labai naudinga skatinimo priemonė, bei monitoringas darbuotoju įndėliu į įmonės augimą. Lentelėje yra galimybė matyti šiuo metu daugiausiai uždirbusį
-      mėnesio darbuotoją, bei patogu vesti mokestines ataskaitas mėnesio gale. Be to turi filtravimo galimybę: pasirinkus einamų metų mėnesius stebėti rezultatus.
+      Tai yra labai naudinga skatinimo priemonė, bei monitoringas darbuotoju indėliu į įmonės augimą. Lentelėje yra galimybė matyti šiuo metu daugiausiai uždirbusį
+      mėnesio darbuotoją, bei patogu vesti mokestines ataskaitas mėnesio gale. Be to, turi filtravimo galimybę: pasirinkus einamų metų mėnesius stebėti rezultatus.
 
 © Created by Andrius 2024 / PTU20
  

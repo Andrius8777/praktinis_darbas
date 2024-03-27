@@ -10,7 +10,7 @@ body {                                     /*veikia*/
 }
 
 
-.puslapis {                /*nlb veikia i apacia*/
+.puslapis {               
     width: auto;
     margin: 0 auto;
     overflow-x: hidden;
@@ -19,25 +19,33 @@ body {                                     /*veikia*/
     
 }
 
-
+.puslapis-b {              
+    width: auto;
+    margin: 0 auto;
+    padding-top: 0;           /*pakeiciau*/
+    box-sizing: border-box;
+    
+}
 
 .servis-header .header-topas {  /*veikia*/
     height: 35px;
     background: whitesmoke;
     position: static;
 }
+.servis-header .header-topas-b {  /*veikia*/
+    height: 20px;
+    background: whitesmoke;
+    position: static;
+}
 
 .servis-header .header-mainas {
-    height: 80px;
     background: #003253;
     width: 100%;
     position: relative;
     color: white;
 }
 
-.servis-header .header-mainas .kontas {
-    height: 100%;
-}
+
 
 .kontas {
     width: 100%;
@@ -58,7 +66,7 @@ body {                                     /*veikia*/
     display: flex;
 }
 
-.a {                          /*neveikia*/
+.a {                          
     color: black;
     text-decoration: none;
     background-color: transparent;
@@ -70,13 +78,12 @@ body {                                     /*veikia*/
     line-height: 16px;
 }
 
-.servis-header .logo-textas .logo {
+.logo-textas .logo {
     position: relative;
-    top: -25px;
-    height: 130px;
-    width: 130px;
+    height: 100px;
+    width: 110px;
     z-index: 100;
-    transform: rotate(-0.01turn);
+    
 }
 
 .servis-header .logo-textas .logo img {
@@ -86,6 +93,7 @@ body {                                     /*veikia*/
     display: block;
     width: 100%;
     border-radius: 10px;
+    margin-top: -0.5rem;
 
 }
 
@@ -102,11 +110,6 @@ img {
     align-self: center;
     margin-left: 10px;
 }
-
-
-
-
-
 
 
 .button-login  {                        /* veikia */
@@ -167,8 +170,6 @@ ul li {
 
 }
 
-
-
 a.menu-link {    /*veikia */
     height: auto;
     font-weight: 600;
@@ -184,14 +185,6 @@ a.menu-link {    /*veikia */
 a.menu-link:hover {             /*veikia*/
     color: #003253;    
 }
-
-
-
-
-
-
-
-
 
 
 /*footeris*/
@@ -289,7 +282,6 @@ a.menu-link:hover {             /*veikia*/
 }
 
 
-
 /*stulpelis3*/
 
 
@@ -330,9 +322,9 @@ a.menu-link:hover {             /*veikia*/
 
 .t-body {
     font-family: 'Segoe UI';
-    font-size: 18px;
+    font-size: 17px;
     color: #404142;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 
@@ -422,8 +414,6 @@ a.menu-link:hover {             /*veikia*/
 }
 
 
-
-
 .blokas-apacia-hero .langas-sonai .langas-remelis { /*ziuret taisyti gal reik backgroundo*/
     height: 100%;
     justify-content: center;
@@ -444,9 +434,6 @@ a.menu-link:hover {             /*veikia*/
     padding-left: 0;
     padding-right: 0;
 }
-
-
-
 
 
 .h1 {
@@ -518,15 +505,6 @@ a.menu-link:hover {             /*veikia*/
     font-size: 3rem;
     line-height: 3.75rem;
 }
-
-
-
-
-
-
-
-
-
 
 /* login page */
 
@@ -641,10 +619,10 @@ body.login-page {
     padding: 12px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 1rem;
     box-sizing: border-box;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .reg-kontas form select {
@@ -703,7 +681,7 @@ body.login-page {
 
 
 .inv-list {
-    width: 5%;
+    width: 9%;
     height: auto;
     margin-top: -25px;
     transform: rotate(-0.01turn);
@@ -743,18 +721,20 @@ body.login-page {
 
 .button-list li {
     margin-bottom: 1.5px;
+    text-align: left;
 }
 
 .button-link {
     display: inline-block;
     padding: 10px 30px;
-    background-color: #dbdbdb; 
     color: #0a0a0a; 
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
     width: 100%;
     margin-left: 7rem;
+    text-align: left;
+    border: 1px solid #ccc;
     
 }
 
@@ -896,11 +876,85 @@ body.login-page {
 
 /* create_mechanic */
 
-.worker-reg-image {
-    width: 135px; 
-    margin-bottom: 20px;
+
+
+.reg-kontas-m {
+    background-color: #f2f2f2; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 15rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    } 
+    
+
+
+
+.reg-kontas-m .create-w input[type="text"],
+.reg-kontas-m .create-w input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+}
+
+.worker-reg2-image {
+    width: 250px; 
+    height: auto;
+}
+
+
+.button-container {
+    margin-top: 20px; 
+    text-align: center; 
+    margin-bottom: 5rem;
+   
+}
+
+
+.reg-kontas-m .create-w button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    margin: 0 auto;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
     
 }
+
+.reg-kontas-m .create-w button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.reg-kontas-m .create-w button[type="button"] {
+    width: 100%;
+    background-color: #9c9d9e;
+    margin: 0 auto;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    
+}
+
+.reg-kontas-m .create-w button[type="button"]:hover {
+    background-color: #88898a;
+}
+
 
 /* created_client_detail */
 
@@ -988,8 +1042,8 @@ body.login-page {
 /* base */
 
 .button-logout  {                      
-    background-color: whitesmoke;
-    color: #003253;
+    background-color: #6d6d6d; 
+    color: white;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -997,17 +1051,13 @@ body.login-page {
 }
 
 
-
 .button-logout:hover  {                        
 
-    background-color: #bcbaba; 
+    background-color: white;
+    color: black; 
 }
 
-.nav-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
+
 
 
 .nav-button .n-inv {
@@ -1036,7 +1086,7 @@ body.login-page {
 .nav-button .b-inv {
     margin: 0 10px; 
     padding: 15px 25px; 
-    background-color: #014d80;
+    background-color: #0261a1;
     color: white;
     border: none;
     border-radius: 4px;
@@ -1047,7 +1097,7 @@ body.login-page {
 }
 
 .nav-button .b-inv:hover {
-    background-color: #003253;
+    background-color: #004370;
 }
 
 .nav-button .b-worker {
@@ -1069,6 +1119,25 @@ body.login-page {
 
 }
 
+.nav-button .b-ataskaita {
+    margin: 0 10px; 
+    padding: 15px 50px; 
+    background-color: silver;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+    
+}
+
+.nav-button .b-ataskaita:hover {
+    background-color: rgb(145, 145, 145);
+
+}
+
 
 .b-kontas {
     width: 100%;
@@ -1077,16 +1146,21 @@ body.login-page {
     margin-right: auto;
     margin-left: auto;
     max-width: 1200px;
-    margin-bottom: 4rem;
+    margin-bottom: 13px;
 }
 
+.konto-turinys {
+    margin-top: 0;
+}
 
 .nav-button {
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-top: 5px;
+    margin-top: -40px;
+    margin-bottom: 5rem;
 }
+
 
 
 .b-home-icon {
@@ -1098,66 +1172,280 @@ body.login-page {
 
 
 
-.reg-mainas-b {                    /* variklis */
-    width: auto;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-
-.reg-kontas-b {                 /* variklis */
-    margin-bottom: 15rem;
-    margin-top: 10rem;
-    margin-left: 10rem;
+.servis-header .header-mainas-b {
+    background: #adadad;
+    width: 100%;
+    color: #0a0925;
     
 }
-
-.registration-image-b {         /* variklis */
-    max-width: auto;
-    height: 900px;
-}
-
-.servis-header .header-mainas-b {
-    height: 110px;
-    background: #003253;
-    width: 100%;
-    position: relative;
-    color: white;
-}
-
 
 .servis-header .konto-turinys-b {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    height: 110px;
+    height: 78px;
     list-style-type: none; 
+    
 }
 
 .servis-header .konto-turinys-b .logo-textas-b {
-    font-size: 26px; 
+    font-size: 26px;
+    font-family: 'Trebuchet MS';
+    
 }
 
 
 .servis-header .konto-turinys-b .logo-textas-b .b-logo {
     width: 115px; 
     height: auto;
-    border-radius: 1rem;
-    margin-top: -0.3rem; 
+   
+   
+     
 }
 
-/* b-footeris */
+/* search */
 
-
-.main-footeris-b {
-    background-color: #003253;
-    padding: 5px 0 7px;
+.reg-kontas-s {       /* ok */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15rem;
 }
 
-.t-body {
-    font-family: 'Segoe UI';
-    font-size: 18px;
-    color: white;
-    font-weight: 600;
+
+
+.reg-kontas-s form button {          /* mygtukas ieskoti */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    width: 20%;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto; 
+    display: block;
+    margin-bottom: 5rem;
+
+
+}
+
+.reg-kontas-s form button:hover {       /* mygtukas ieskoti */
+    background-color: #45a049;
+}
+
+.center-form {
+    display: grid;
+    place-items: center;
+}
+
+
+.reg-kontas-s button {         /* surastas tekstas */
+    background-color: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+.reg-kontas-s button:hover {    /* surastas tekstas */
+    text-decoration: none;
+}
+
+.surasta p {                        /* surasta tektas */ 
+    margin-left: 9.5rem;
+    color: grey;
+    font-weight: 400;
+}
+
+.date-from-to input[type="date"] {  /* datos laukai */
+    width: 160px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+}
+
+
+.date-from-to {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+ 
+}
+
+.paieska {
+    font-size: 10px; 
+    color: #014d80;
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+
+
+.search input[type="text"] {       /* search laukas */
+    width: 23rem; 
+    height: 2.5rem; 
+    text-align: center;
+    border: 2px solid #ccc; 
+    border-radius: 15px;
+    box-sizing: border-box;
+    
+}
+
+.search {                      /* search laukas */
+    text-align: center;
+    margin-top: 2rem; 
+    
+}
+
+
+.search-logo {                /* ok */  
+    text-align: center;
+}
+
+.search-img {                    /* ok */    
+    width: 12rem; 
+    height: 12rem;
+}
+
+ /* base footeris */  
+
+  /* ok */  
+
+  .main-footeris-b {
+    background-color: #bcbaba;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kontas-b {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+}
+
+/* top_mechanics */
+
+
+.top-image {
+    width: 100;
+    height: 100px;
+    margin-left: -2rem;
+}
+
+.centered-top {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: -4rem;
+}
+
+.centered-top {
+    margin-left: 5px;
+}
+
+
+/* lentele */
+
+.table-kontas {
+    overflow-x: auto; 
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    
+}
+
+.lentele {
+    border-collapse: collapse; 
+    width: 50%;
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 10rem; 
+    
+}
+
+.top-form {
+    margin-top: 10px;
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.top-form select {
+    padding: 8px; 
+    font-size: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+.top-form button {
+    padding: 8px 16px; 
+    font-size: 13px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+}
+
+.top-form button:hover {
+    background-color: #45a049; 
+}
+
+
+.reg-kontas-t {
+    background-color: #f2f2f2; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 15rem;
+    
+}
+
+
+.lentele th, .lentele td {
+    border: 1px solid #ddd; 
+    padding: 8px;
+    text-align: center;
+}
+
+.lentele th {
+    background-color: #f2f2f2; 
+}
+
+.lentele tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.lentele tr:hover {
+    background-color: #ddd; 
+}
+
+
+.logo-and-worker-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111111;
+    margin-bottom: 3rem;
+}
+
+.center {
+    text-align: center;
+    margin-top: 50px; 
+}
+
+.center p {
+    color: grey;
+    font-weight: 400;
 }

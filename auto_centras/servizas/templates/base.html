@@ -1,22 +1,22 @@
-<!DOCTYPE html>{% load static %}
-<html>
+<!DOCTYPE html>
+<html>{% load static %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}SERVIZAS{% endblock title %}</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>   
-<div class="puslapis">
+<body>  
+<div class="puslapis-b">
       <header class="servis-header">
-            <div class="header-topas"></div>
+            <div class="header-topas-b"></div>
             <div class="header-mainas-b">
                 <div class="b-kontas">
                     <div class="konto-turinys-b">
                         <div class="logo-textas-b">
-                            <img src="{% static 'images/logo-vievis.png' %}" alt="list" class="b-logo"> 
-                            <span>UAB "Vievio AutoCentras"</span>          
-                        </div>
+                            <img src="{% static 'images/header_logo.png' %}" alt="list" class="b-logo"> 
+                            <span>PTU20 v.1.0</span>          
+                        </div> 
                         <div class="button-header-b">
                             <li><form method="post" action="{% url "logout" %}">{% csrf_token %}
                             <button class="button-logout" type="submit">Atsijungti</button></form></li> 
@@ -40,6 +40,7 @@
                                 <a href="{% url 'create_client_data' %}" ><button class="n-inv">Naujas užsakymas</button></a>
                                 <a href="{% url 'created_data_list' %}" ><button class="b-inv">Įšrašytos sąskaitos</button></a>
                                 <a href="{% url 'mechanic_list' %}" ><button class="b-worker">Darbuotojai</button></a>
+                                <a href="{% url 'top_month_mechanic' %}" ><button class="b-ataskaita">Ataskaita</button></a>
                             </div>
                         </ul>
                   </nav>
@@ -48,42 +49,52 @@
       </div>
       </header>
     {% block content %}
-    <div class="reg-mainas-b">
-        <div class="reg-kontas-b">    
-            <img src="{% static 'images/engine.png' %}" alt="Registration" class="registration-image">
+    <div class="reg-mainas">
+        <div class="reg-kontas-s">
+            <div class="search-logo">
+                <img src="{% static 'images/search.png' %}" alt="list" class="search-img"> 
+            </div>
+            <form method="post" class="center-form">
+                {% csrf_token %}
+                <div class="search">
+                    {{ form.query }}
+                </div>
+                <h1 class="paieska">Data: nuo-iki</h1> 
+                <div class="date-from-to">
+                    {{ form.start_date }}
+                    {{ form.end_date }}
+                </div>
+                <button type="submit" class="btn btn-primary">Ieškoti</button>
+            </form>
+            {% if queryset %}
+                {% if count %}
+                    <div class='surasta'>
+                        <p>Surasta: {{ count }} įrašas(i).</p>
+                    </div>
+                {% endif %}
+                <ul class="button-list">
+                    {% for item in queryset %}
+                    <li>
+                        <button class="button-link" onclick="window.location.href='{% url 'created_client_detail' client_id=item.pk %}'">
+                            <strong>INV:</strong> {{ item.invoice_number }} {{item.created_date|date:"Y/m/d"}} {{item.client_name}} {{item.make}} {{item.model}} {{item.number_plate}}<br>
+                        </button>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class='surasta'>
+                    <p>Nėra įrašų, atitinkančių nurodytus filtrus.</p>
+                </div>
+            {% endif %}
         </div>
-    </div>
+    </div>    
     {% endblock %}
-    <footer class="main-footeris-b"> 
-        <div class="kontas">
-            <div class="stulpeliai">
-                <div class="stulpelis-1">
-                    <p class="pavadinimas-a">Kontaktai:</p>
-                    <p class="pavadinimas-a-1"><img class="cont" src="{% static "images/vv.png" %}">UAB "Vievio AutoCentras"</p>
-                    <p class="pavadinimas-a-1"><img class="cont" src="{% static "images/house.png" %}">Naujoji g. 6A, Vievis, 21375 Elektrėnų sav.</p>
-                    <p class="pavadinimas-a-1"><img class="cont" src="{% static "images/phone.png" %}">Tel.: +37061459800</p>
-                    <p class="pavadinimas-a-1"><img class="cont" src="{% static "images/email.png" %}">vievioautocentras@gmail.com</p>
-                </div>
-                <div class="stulpelis-2">
-                    <p class="pavadinimas-b">Mūsų partneriai:</p>
-                    <div class="partneriai">
-                        <a href="https://www.adbaltic.lt/"><img class="icon" src="{% static "images/ad.png" %}"></a>
-                        <a href="https://www.eoltas.lt/" ><img class="icon" src="{% static "images/eoltas.png" %}"></a>
-                        <a href="https://www.intercars.lt/"><img class="icon" src="{% static "images/intercars.png" %}"></a>
-                    </div>  
-                </div>
-                <div class="stulpelis-3">
-                    <p class="pavadinimas-c">Išjunk okupantus ir tu!</p>
-                    <div class="laisve">
-                        <a href="https://blue-yellow.lt//"><img class="ukraine" src="{% static "images/ua1.png" %}"></a>
-                    </div>  
-                </div>
+    <footer class="main-footeris-b">
+        <div class="kontas-b">
+            <div class="t-kontas">
+                <span class="t-body">© Vievio AutoCentras UAB 2016 - 2024, visos teisės saugomos. Created by Andrius PTU20</span>
             </div>
-                <div class="t-kontas">
-                    <span class="t-body-b">© Vievio AutoCentras UAB 2016 - 2024. Prisijungimas tik autorizuotas!</span>
-                </div>
-            </div>
-        </div>  
+        </div>
     </footer>
 </div>
 </body>

@@ -1,5 +1,4 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %}{% load static %}
 {% block content %}
 <div class="reg-mainas">
   <div class="reg-kontas">    
@@ -42,10 +41,10 @@
         </select><br>
 
         <label for="id_number_plate">Tr.pr. numeriai:</label>
-        <input type="text" id="id_number_plate" name="number_plate" placeholder="AAA-000">
+        <input type="text" id="id_number_plate" name="number_plate" placeholder="AAA-000" oninput="this.value = this.value.toUpperCase()">
 
         <label for="id_vin_number">VIN Numeris:</label>
-        <input type="text" id="id_vin_number" name="vin_number" placeholder="WBAPNVL379842075A">
+        <input type="text" id="id_vin_number" name="vin_number" placeholder="WBAPNVL379842075A" maxlength="17" oninput="this.value = this.value.toUpperCase()">
 
         <label for="id_year">Pagaminimo metai:</label>
         <select id="id_year" name="year"></select><br>

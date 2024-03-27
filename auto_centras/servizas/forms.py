@@ -17,3 +17,9 @@ class MechanicForm(forms.ModelForm):
     class Meta:
         model = models.Mechanic
         fields = ('name', 'ph_number', 'skills', )
+
+
+class ClientDataFilterForm(forms.Form):
+    start_date = forms.DateField(label='Nuo', required=False, widget=forms.DateInput(attrs={'type': 'date'}))
+    end_date = forms.DateField(label='Iki', required=False, widget=forms.DateInput(attrs={'type': 'date'}))
+    query = forms.CharField(label='', required=False, widget=forms.TextInput(attrs={'placeholder': 'Paieška'}))

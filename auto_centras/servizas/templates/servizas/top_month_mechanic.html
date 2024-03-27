@@ -1,18 +1,43 @@
-{% extends "base.html" %}
-    <h1>Top Mechanics by Profit</h1>
-    <table border="1">
-        <tr>
-            <th>Month</th>
-            <th>Mechanic Name</th>
-            <th>Total Profit</th>
-        </tr>
-        {% for item in top_mechanics %}
-        <tr>
-            <td>{{ item.month }}</td>
-            <td>{{ item.top_mechanic.mechanic__name }}</td>
-            <td>{{ item.top_mechanic.total_profit }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-
-
+{% extends 'base.html' %}{% load static %}
+{% block title %}Top{{ block.super }}{% endblock title %}
+{% block content %}
+<div class="reg-mainas">
+    <div class="reg-kontas-t">
+        <form method="GET" class="top-form">
+            <select id="month_select" name="selected_month">
+                <option value="">--Mėnuo--</option>
+                {% for month_num, month_name in month_names.items %}
+                    <option value="{{ month_num }}" {% if selected_month|stringformat:"s" == month_num|stringformat:"s" %}selected{% endif %}>{{ month_name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Įstorija: </button>
+        </form>
+        <div class="logo-and-worker-a"> 
+            <img src="{% static 'images/worker1.png' %}" alt="list" class="top-image"> 
+            <h1 class="centered-top">Mėnesio darbuotojas: {{ top_mechanics.0.mechanic_name }}</h1> 
+        </div>
+        {% if top_mechanics %}
+            <div class='table-kontas'>
+                <table class='lentele' border="1">
+                    <tr>
+                        <th>Nr.</th>
+                        <th>Vardas</th>
+                        <th>Pelnas</th>
+                    </tr>
+                    {% for mechanic in top_mechanics %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ mechanic.mechanic_name }}</td>
+                        <td>{{ mechanic.total_labor_cost }}&euro;</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% else %}
+        <div class="center">
+            <p>Šis mėnuo neturi įrašų.</p>
+        </div>
+        {% endif %}
+    </div>   
+</div>
+{% endblock %}

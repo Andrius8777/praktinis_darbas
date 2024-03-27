@@ -10,7 +10,6 @@ class Mechanic(models.Model):
     skills = models.CharField(max_length=100, verbose_name='Įgūdžiai:')
     working_from = models.DateTimeField(auto_now_add=True)
     
-
     def __str__(self):
         return self.name
     

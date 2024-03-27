@@ -1,1 +1,0 @@
-# praktinis_darbas

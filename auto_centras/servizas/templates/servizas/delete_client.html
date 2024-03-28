@@ -2,12 +2,12 @@
 {% block title %}Trinimas{{ block.super }}{% endblock title %}
 {% block content %}
 <div class="reg-mainas">
-    <div class="reg-kontas">
+    <div class="reg-kontas-d">
         <div class="logo-and-h1"> 
-            <img src="{% static 'images/delete2.png' %}" alt="Delete" class="delete-client"> 
-            <h1 class="centered-h1">Ar Jus, tikrai norite pašalinti sąskaitą?</h1>
+            <img src="{% static 'images/delete_inv.png' %}" alt="Delete" class="delete-client">
+            <h1 class="centered-h1">Pašalinti sąskaitą: {{ client.invoice_number }}?</h1>
         </div>
-        <form method="post">
+        <form method="post" class="delete-w">
             {% csrf_token %}
             <button type="submit">Patvirtinti</button>
             <a href="{% url 'created_data_list' %}"><button type="button">Atšaukti</button></a>
